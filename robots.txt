@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://simonix.io/sitemap.xml

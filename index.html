@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simonix — платформа роботизированных систем</title>
+<meta name="description" content="Simonix — B2B2C-платформа сделок с роботизированными системами: медицинские роботы, ИИ-протезы, промышленные и антропоморфные системы. Аренда, RaaS, лизинг, трейд-ин. Комиссия от 1% до 15%+.">
+<meta name="theme-color" content="#0e1116">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Simonix — платформа роботизированных систем">
+<meta property="og:description" content="Связующее звено между производителями и заказчиками робототехники. Модель дохода: от 1% до 15%+ со сделки.">
+<meta property="og:image" content="assets/img/og-cover.svg">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=10">
+<link rel="stylesheet" href="assets/css/main.css?v=10">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="#hero" aria-label="Simonix — на главную">
+      <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="29" height="29" rx="8"/>
+        <path d="M10 21.5c1.9 1.3 3.9 2 6 2 3.2 0 5-1.4 5-3.4 0-2.2-2-3-5.6-3.7-3.9-.8-6.2-2.2-6.2-5.2 0-3 2.7-5.2 6.7-5.2 2 0 3.9.5 5.6 1.6"/>
+      </svg>
+      <span class="logo__text">SIMONIX</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a href="#architecture">Экосистема</a></li>
+        <li><a href="#problem">Проблемы и решения</a></li>
+        <li><a href="#segments">Сегменты</a></li>
+        <li><a href="#model">Монетизация</a></li>
+        <li><a href="#economics">Экономика</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#invest">Инвестору</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--primary btn--sm" href="#contact">Запросить Deck</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="header__progress" id="progress"></div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <p class="eyebrow"><span class="dot"></span> Pre-seed · B2B2C marketplace · Robotics</p>
+        <h1 class="hero__title">
+          Интеллектуальный B2B-маркетплейс и комплексная
+          инфраструктура сделок для робототехники
+        </h1>
+        <p class="hero__lead">
+          Simonix соединяет производителей, поставщиков робототехники и ИИ-протезов
+          с заводами, клиниками и конечными покупателями. Платформа не производит
+          и не хранит технику — она создаёт удобную и безопасную цифровую среду для сделок:
+          автоматизирует ИИ-проверку документов, интегрирует склады через API, управляет
+          подписками на робототехнику (например RaaS), а также помогает привлекать внешнее
+          финансирование, решать вопросы сертификации и в целом объединяет посредников
+          по всей цепочке.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#invest">Инвестиционное предложение</a>
+          <a class="btn btn--outline" href="#model">Как мы зарабатываем</a>
+        </div>
+      </div>
+
+      <aside class="hero__panel reveal" aria-label="Схема работы платформы">
+        <div class="panel">
+          <div class="panel__head">
+            <span class="panel__title">deal_flow.simonix</span>
+            <span class="panel__status"><i></i> live</span>
+          </div>
+          <ul class="flow">
+            <li class="flow__item">
+              <span class="flow__num">01</span>
+              <div><b>Поставщики</b><small>Вендоры · заводы · интеграторы</small></div>
+            </li>
+            <li class="flow__item flow__item--core">
+              <span class="flow__num">02</span>
+              <div><b>Simonix</b><small>Локальный ИИ · подбор · скоринг · смарт-контракты</small></div>
+            </li>
+            <li class="flow__item">
+              <span class="flow__num">03</span>
+              <div><b>Партнёры</b><small>Лизинг · банки · сертификация · ПНР · сервис</small></div>
+            </li>
+            <li class="flow__item">
+              <span class="flow__num">04</span>
+              <div><b>Заказчики</b><small>Заводы · клиники · коммерция · B2C</small></div>
+            </li>
+            <li class="flow__item flow__item--out">
+              <span class="flow__num">₽</span>
+              <div><b>Комиссия</b><small>Доход платформы: от 1% до 15%+ со сделки</small></div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ LOGOS / TRUST STRIP ============ -->
+  <section class="strip" aria-label="Направления работы">
+    <div class="container strip__inner">
+      <span>Медицинская робототехника</span><i></i>
+      <span>Бионические протезы с ИИ</span><i></i>
+      <span>Промышленная автоматизация</span><i></i>
+      <span>Антропоморфные платформы</span><i></i>
+      <span>Сертификация и ПНР</span>
+    </div>
+  </section>
+
+  <!-- ============ ARCHITECTURE ============ -->
+  <section class="section section--alt section--tight" id="architecture">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">01 — Экосистема</p>
+        <h2 class="section__title">Экосистема платформы</h2>
+      </header>
+
+      <div class="arch">
+
+        <article class="arch__node reveal">
+          <header class="arch__head">
+            <span class="arch__num">01</span>
+            <div>
+              <h3>Поставщики</h3>
+              <p class="arch__role">Продавцы</p>
+            </div>
+          </header>
+          <ul class="arch__list">
+            <li><b>Вендоры и заводы-производители (OEM)</b><span>Прямые поставщики новых медицинских, ИИ-протезов, антропоморфных и промышленных систем</span></li>
+            <li><b>Официальные дистрибьюторы</b><span>Крупные оптовые поставщики оборудования и оригинальных комплектующих</span></li>
+            <li><b>Авторизованные Trade-in &amp; Refurbished операторы</b><span>Партнёры по оценке, выкупу, аппаратному обновлению и перепродаже б/у роботов</span></li>
+          </ul>
+        </article>
+
+        <article class="arch__node arch__node--core reveal">
+          <header class="arch__head">
+            <span class="arch__num">02</span>
+            <div>
+              <h3>Цифровая платформа Simonix</h3>
+            </div>
+          </header>
+          <ul class="arch__list">
+            <li><b>ИИ-верификация</b><span>Автоматический скоринг документов и контрагентов</span></li>
+            <li><b>API-интеграция</b><span>Сквозная синхронизация со складами партнёров</span></li>
+            <li><b>Безопасный контур</b><span>Локальный ИИ, защищённые чаты, конфиденциальность данных</span></li>
+            <li><b>Гибкие рабочие пространства</b><span>Персонализированная рабочая среда под задачи инженеров, аналитиков и финансистов</span></li>
+            <li><b>Конструктор контрактов</b><span>Автоматизация сделок: RaaS, трейд-ин, аренда, кредит/рассрочка, лизинг</span></li>
+          </ul>
+        </article>
+
+        <article class="arch__node reveal">
+          <header class="arch__head">
+            <span class="arch__num">03</span>
+            <div>
+              <h3>Партнёры экосистемы</h3>
+              <p class="arch__role">Технические и финансовые</p>
+            </div>
+          </header>
+          <p class="arch__sub">Технические партнёры</p>
+          <ul class="arch__list">
+            <li><b>Сертифицированные системные интеграторы и ПНР</b><span>Инжиниринговые компании, адаптирующие роботов под конкретные задачи клиентов. Профессиональный монтаж, программирование и запуск</span></li>
+            <li><b>Сервисные компании</b><span>Сертификация, регулярное техобслуживание, ремонт и поддержка</span></li>
+            <li><b>Логистические операторы</b><span>Безопасная доставка сложного оборудования</span></li>
+          </ul>
+          <p class="arch__sub">Финансовые партнёры</p>
+          <ul class="arch__list">
+            <li><b>Лизинговые компании</b><span>Оформление долгосрочного лизинга</span></li>
+            <li><b>Банки-партнёры</b><span>Целевые B2B-кредиты, рассрочки, факторинг</span></li>
+            <li><b>Страховые компании</b><span>Защита дорогостоящих робототехнических активов</span></li>
+          </ul>
+        </article>
+
+        <article class="arch__node reveal">
+          <header class="arch__head">
+            <span class="arch__num">04</span>
+            <div>
+              <h3>Заказчики</h3>
+              <p class="arch__role">Покупатели</p>
+            </div>
+          </header>
+          <ul class="arch__list">
+            <li><b>Промышленность и логистика</b><span>Заводы, фабрики, автоматизация линий, склады и распределительные центры</span></li>
+            <li><b>Медицинские клиники</b><span>Хирургические, диагностические и реабилитационные системы</span></li>
+            <li><b>HoReCa и коммерция</b><span>Роботы-клинеры, доставщики, администраторы</span></li>
+            <li><b>Конечные потребители (B2C)</b><span>Высокотехнологичные ИИ-протезы, домашние ассистенты, роботы для ухода</span></li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="arch__money reveal">
+        <div class="arch__money-text">
+          <p class="eyebrow"><span class="eyebrow__rub">₽</span> Монетизация</p>
+          <h3>Комиссия платформы: от 1% до 15%+</h3>
+          <p>В зависимости от формата сделки: прямая покупка, RaaS, кредит, лизинг или сложный трейд-ин.</p>
+        </div>
+        <div class="arch__rate"><b>1—15%<sup>+</sup></b><span>со сделки</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="section" id="problem">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">02 — Проблема</p>
+        <h2 class="section__title">Роботы есть. Сделок нет.</h2>
+        <p class="section__lead">
+          Рынок робототехники растёт быстрее, чем инфраструктура его продаж.
+          Между готовым решением и заказчиком стоят капитальные затраты, регуляторика
+          и отсутствие сервисного контура.
+        </p>
+      </header>
+
+      <p class="row-label reveal"><span>Ряд 1</span> Инфраструктурный хаос</p>
+      <div class="cards cards--4">
+        <article class="card reveal">
+          <span class="card__idx">01 / Раздробленность рынка</span>
+          <h3>Сегментация рынка</h3>
+          <p>Отсутствует единая цифровая среда, связывающая разработчиков, поставщиков и конечных
+             клиентов. Десятки закрытых вендорских экосистем изолированы друг от друга.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__idx">02 / Архаичный поиск</span>
+          <h3>Устаревший подбор</h3>
+          <p>Ключевыми каналами продаж остаются выставки и личные связи. На рынке полностью
+             отсутствует прозрачное ИИ-сравнение параметров и автоматизированный подбор систем.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__idx">03 / Разрыв коммуникаций</span>
+          <h3>Сложные роли</h3>
+          <p>Без сквозных умных рабочих пространств инженеры, директора и закупщики говорят
+             на разных языках. Это критически затягивает согласование и цикл B2B-сделки.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__idx">04 / Барьер капитала</span>
+          <h3>Высокий чек</h3>
+          <p>Роботизированные комплексы — это десятки миллионов затрат. Клиника или средний
+             завод не выкупают технику, но готовы платить за использование.</p>
+        </article>
+      </div>
+
+      <p class="row-label reveal"><span>Ряд 2</span> Регуляторные и сервисные тупики</p>
+      <div class="cards cards--4">
+        <article class="card reveal">
+          <span class="card__idx">05 / Регуляторный тупик</span>
+          <h3>Сложная логистика</h3>
+          <p>Регистрационные удостоверения, декларации, метрология, обучение персонала.
+             Вендор не хочет держать штат под каждый рынок, заказчик не умеет проходить путь сам.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__idx">06 / Разрыв в сервисе</span>
+          <h3>Отсутствие ТО</h3>
+          <p>Пусконаладка, ЗИП, обновления ПО, апгрейд на новое поколение. Без сквозного
+             сервисного контура дорогое железо простаивает и быстро обесценивается.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__idx">07 / Финансовые потери</span>
+          <h3>Заморозка бюджетов</h3>
+          <p>Ручной подбор конфигураций и долгие проверки контрагентов сжигают время.
+             Компании теряют выгоду, а модернизация реального сектора останавливается.</p>
+        </article>
+        <article class="card card--answer reveal">
+          <span class="card__idx">08 / Решение Simonix</span>
+          <h3>Единая экосистема</h3>
+          <p>Simonix полностью устраняет эти барьеры, объединяя ИИ-подбор, гибкие рабочие кабинеты,
+             финансовые инструменты и сервис в одном окне.</p>
+          <a class="card__link" href="#solution">Решение <span aria-hidden="true">↓</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOLUTION ============ -->
+  <section class="section section--alt" id="solution">
+    <div class="container">
+      <div class="split">
+        <div class="split__text reveal">
+          <p class="eyebrow">03 — Решение</p>
+          <h2 class="section__title">Связующее звено</h2>
+          <p class="section__lead">
+            Simonix — цифровой слой поверх рынка. Платформа не держит склад, не строит заводы
+            и не берёт на баланс технику. Мы берём на себя то, что мешает сделке состояться,
+            и получаем процент от результата.
+          </p>
+          <ul class="list-check">
+            <li><b>Каталог и ИИ-матчинг.</b> Умный поиск, автоматическое сравнение параметров
+                и подбор робототехники под задачу и бюджет. Частные покупатели могут сами
+                выбрать протез и рекомендовать его клинике.</li>
+            <li><b>Финансовый контур.</b> Партнёрские лизинговые и банковские продукты,
+                расчёт TCO и графика платежей.</li>
+            <li><b>Регуляторика и безопасность.</b> Сопровождение сертификации через
+                аккредитованных партнёров. Защищённый контур с локальным ИИ и чатами
+                для 100% конфиденциальности данных сделки.</li>
+            <li><b>Внедрение и интеграция.</b> Подрядчики по ПНР, обучению и сервису
+                с жёстким SLA внутри платформы. Подгрузка документов и бесшовная
+                синхронизация со складами клиентов через API.</li>
+            <li><b>Вторичный рынок.</b> Трейд-ин, оценка остаточной стоимости на базе
+                ИИ-аналитики наработки, перепродажа и рефёрбишмент (восстановление / обновление).</li>
+          </ul>
+        </div>
+
+        <div class="split__media reveal">
+          <div class="stack">
+            <div class="stack__layer">
+              <span class="stack__tag">Слой 4</span>
+              <b>Аналитика и безопасность</b>
+              <small>Локальный ИИ • защищённый контур чатов • оценка остаточной стоимости и наработки</small>
+            </div>
+            <div class="stack__layer">
+              <span class="stack__tag">Слой 3</span>
+              <b>Сервис и интеграция</b>
+              <small>API-склады • подрядчики ПНР и ТО • контроль SLA и ЗИП</small>
+            </div>
+            <div class="stack__layer">
+              <span class="stack__tag">Слой 2</span>
+              <b>Право и финансы</b>
+              <small>ИИ-верификация документов • лизинг и RaaS • безопасные эскроу-сделки • сертификация</small>
+            </div>
+            <div class="stack__layer stack__layer--base">
+              <span class="stack__tag">Слой 1</span>
+              <b>B2B2C-маркетплейс</b>
+              <small>Робототехника и ИИ-протезы • прямой спрос • параметрический ИИ-матчинг и поиск</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEGMENTS ============ -->
+  <section class="section" id="segments">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">04 — Сегменты рынка</p>
+        <h2 class="section__title">Четыре рынка — одна платформа</h2>
+      </header>
+
+      <div class="cards cards--4">
+
+        <article class="card card--seg reveal">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          <h3>Медицинские роботы</h3>
+          <p>Хирургические комплексы, реабилитационные и диагностические системы,
+             лабораторная автоматизация. Прямые поставки оборудования для частных клиник
+             и государственных медицинских центров.</p>
+          <ul class="tags">
+            <li>RaaS</li><li>Лизинг</li><li>B2B-рассрочка</li><li>Факторинг</li><li>Трейд-ин</li>
+          </ul>
+        </article>
+
+        <article class="card card--seg reveal">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3v6l-3 3v9M15 3v6l3 3v9M9 12h6"/></svg>
+          <h3>Протезы с ИИ <span class="card__badge">B2B2C</span></h3>
+          <p>Бионические конечности с адаптивным управлением и экзоскелеты. Прямой заказ
+             конечными пользователями с рекомендацией клиники. Подписка на обновление
+             ИИ-алгоритмов и индивидуальный апгрейд.</p>
+          <ul class="tags">
+            <li>Кредит / рассрочка</li><li>Апгрейд ИИ</li><li>Госпрограммы</li>
+          </ul>
+        </article>
+
+        <article class="card card--seg reveal">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 20V9l5 3V9l5 3V4h3v16"/></svg>
+          <h3>Промышленные системы</h3>
+          <p>Роботизированные ячейки, паллетайзеры, сварка, контроль качества.
+             Внутрискладская AMR-логистика для заводов и крупных распределительных центров.
+             Сервисное обслуживание с гарантированным SLA.</p>
+          <ul class="tags">
+            <li>Аренда</li><li>Лизинг</li><li>B2B-рассрочка</li><li>Факторинг</li>
+            <li>RaaS</li><li>Рефёрбишмент</li><li>Трейд-ин</li>
+          </ul>
+        </article>
+
+        <article class="card card--seg reveal">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3"/><path d="M12 9v7m-4 5 4-5 4 5M7 12h10"/></svg>
+          <h3>Сервисные и антропоморфные роботы <span class="card__badge">HoReCa</span></h3>
+          <p>Сервисные гуманоиды, телеприсутствие, коммерческий клининг и роботы-доставщики
+             для HoReCa. Пилотные внедрения с гибкой тарификацией.</p>
+          <ul class="tags">
+            <li>RaaS / аренда</li><li>Лизинг</li><li>Бизнес-кредит</li><li>Шеринг</li><li>Трейд-ин</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUSINESS MODEL ============ -->
+  <section class="section section--alt" id="model">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">05 — Монетизация и преимущества</p>
+        <h2 class="section__title">От 1% до 15%+ со сделки</h2>
+        <p class="section__lead">
+          Ставка зависит от формата сделки и глубины участия платформы: от прямой поставки
+          до многолетнего потока подписных платежей. Чем длиннее контракт — тем выше
+          пожизненная ценность приведённого клиента.
+        </p>
+      </header>
+
+      <div class="table-wrap reveal">
+        <table class="table">
+          <thead>
+            <tr><th>Формат</th><th>Что происходит</th><th>База комиссии</th><th class="num">Ставка</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Аренда</b></td><td>Стыковка клиентов с арендными пулами партнёров онлайн</td><td>Арендный платёж</td><td class="num">5—8%</td></tr>
+            <tr><td><b>RaaS</b></td><td>Робот как сервис: подписка, софт платформы и обновления</td><td>Ежемесячный поток</td><td class="num">10—12%+</td></tr>
+            <tr><td><b>Лизинг и рассрочка</b></td><td>Финансовые инструменты через банки-партнёры платформы</td><td>Сумма субсидии</td><td class="num">1—3%</td></tr>
+            <tr><td><b>Трейд-ин и рефёрбишмент</b></td><td>ИИ-оценка наработки и перепродажа б/у систем партнёров</td><td>Разница / стоимость</td><td class="num">10—15%</td></tr>
+            <tr><td><b>Прямая продажа</b></td><td>Поставка от верифицированного вендора через эскроу</td><td>Сумма контракта</td><td class="num">2—5%</td></tr>
+            <tr><td><b>Импорт из Китая</b></td><td>Стыковка клиента с логистом и ИИ-аудит документов</td><td>Сумма контракта</td><td class="num">1—3%</td></tr>
+            <tr><td><b>Лиды и сервис</b></td><td>Передача заказов на ПНР, ТО и сертификацию партнёрам</td><td>Стоимость работ</td><td class="num">3—7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="efficiency reveal">
+        <div class="efficiency__head">
+          <span class="efficiency__badge">Asset-Light</span>
+          <h3>Эффективность бизнес-модели</h3>
+        </div>
+        <div class="efficiency__body">
+          <p><b>Высокая маржинальность.</b> Платформа Simonix работает по эффективной
+             модели Asset-Light. Мы не несём затрат на логистику и склады, обеспечивая высокую
+             рентабельность IT-платформы за счёт быстрой оборачиваемости крупных B2B-чеков.</p>
+          <p>По мере масштабирования экосистемы транзакционная комиссия будет дополняться
+             фиксированной подпиской <b>(SaaS)</b> за использование адаптивных кабинетов
+             конструкторами и директорами, а также расширением программ комплексного сервиса.</p>
+        </div>
+      </div>
+
+      <div class="cards cards--adv mt-l">
+
+        <article class="card card--adv reveal">
+          <span class="card__idx">Сетевой эффект</span>
+          <h3>Капитализация данных</h3>
+          <p>Чем больше сделок проходит через Simonix, тем точнее наш ИИ обучается матчингу.
+             Данные о наработке железа и остаточной стоимости формируют уникальную базу,
+             которой нет ни у одного вендора на рынке.</p>
+        </article>
+
+        <article class="card card--adv reveal">
+          <span class="card__idx">Наполняемость экосистемы</span>
+          <h3>Маркетплейс предложений</h3>
+          <p>Рост базы роботов привлекает сторонних разработчиков ПО. Платформа превращается
+             в маркетплейс приложений для автоматизации, генерируя новый высокомаржинальный
+             поток выручки без затрат на маркетинг.</p>
+        </article>
+
+        <article class="card card--adv reveal">
+          <span class="card__idx">Экосистемный барьер (Moat)</span>
+          <h3>Экосистемная ценность</h3>
+          <p>Каждый новый вендор усиливает предложение, а каждый новый заказчик — спрос.
+             По мере накопления базы и развития адаптивных мультизадачных кабинетов эко-платформа
+             становится незаменимой в автоматизации бизнес-процессов.</p>
+        </article>
+
+        <article class="card card--adv reveal">
+          <span class="card__idx">Технологический барьер</span>
+          <h3>Собственные локальные ИИ</h3>
+          <p>ИИ-модели, встроенные в платформу, разворачиваются локально в защищённом контуре
+             клиента. Они обучаются на закрытых данных о наработке систем, TCO и спецификациях.
+             Этот интеллектуальный капитал невозможно скопировать.</p>
+        </article>
+
+        <article class="card card--adv reveal">
+          <span class="card__idx">Отсутствие материальных рисков</span>
+          <h3>Масштабируемость</h3>
+          <p>Бизнес имеет минимальный CapEx и растёт без раздувания физических активов.
+             Отсутствие складов и рисков владения «железом» позволяет платформе мгновенно
+             масштабировать номенклатуру услуг на любые международные рынки.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UNIT ECONOMICS ============ -->
+  <section class="section" id="economics">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">06 — Экономика</p>
+        <h2 class="section__title">Калькулятор комиссии</h2>
+        <p class="section__lead">
+          Модельный расчёт: как объём сделок на платформе конвертируется в выручку.
+          Значения иллюстративные, задайте свои.
+        </p>
+      </header>
+
+      <div class="calc reveal">
+        <form class="calc__controls" id="calc">
+          <label class="field">
+            <span>Средний чек контракта, ₽</span>
+            <input type="range" id="ticket" min="1000000" max="60000000" step="500000" value="12000000">
+            <output id="ticketOut"></output>
+          </label>
+          <label class="field">
+            <span>Сделок в месяц</span>
+            <input type="range" id="deals" min="1" max="60" step="1" value="20">
+            <output id="dealsOut"></output>
+          </label>
+          <label class="field">
+            <span>Доля RaaS / аренды</span>
+            <input type="range" id="raas" min="0" max="100" step="5" value="15">
+            <output id="raasOut"></output>
+          </label>
+          <label class="field">
+            <span>Доля трейд-ин и рефёрбишмента</span>
+            <input type="range" id="trade" min="0" max="100" step="5" value="15">
+            <output id="tradeOut"></output>
+          </label>
+
+          <div class="field field--readonly">
+            <span>Средневзвешенная ставка <em>расчётная</em></span>
+            <input type="range" id="rateSlider" min="3" max="12.5" step="0.01" value="5.63"
+                   tabindex="-1" aria-readonly="true" aria-label="Средневзвешенная ставка, рассчитывается автоматически">
+            <output id="rateOut"></output>
+          </div>
+
+          <div class="calc__mix" aria-hidden="true">
+            <div class="mixbar">
+              <span class="mixbar__seg mixbar__seg--raas"  id="segRaas"></span>
+              <span class="mixbar__seg mixbar__seg--trade" id="segTrade"></span>
+              <span class="mixbar__seg mixbar__seg--base"  id="segBase"></span>
+            </div>
+            <ul class="mixlegend">
+              <li><i class="dot--raas"></i> RaaS <b id="legRaas"></b></li>
+              <li><i class="dot--trade"></i> Трейд-ин <b id="legTrade"></b></li>
+              <li><i class="dot--base"></i> B2B2C-остаток <b id="legBase"></b></li>
+            </ul>
+          </div>
+        </form>
+
+        <div class="calc__result">
+          <div class="kpi">
+            <span class="kpi__label">GMV в год</span>
+            <b class="kpi__value" id="gmv">—</b>
+          </div>
+          <div class="kpi kpi--accent">
+            <span class="kpi__label">Выручка платформы в год</span>
+            <b class="kpi__value" id="rev">—</b>
+          </div>
+          <div class="kpi">
+            <span class="kpi__label">Повторяемая часть (ARR от RaaS)</span>
+            <b class="kpi__value" id="arr">—</b>
+          </div>
+          <p class="calc__formula" id="rateFormula"></p>
+          <p class="calc__note">
+            Ставка рассчитывается автоматически как средневзвешенная по структуре сделок
+            и не редактируется. Расчёт не является офертой или прогнозом — служит
+            для оценки чувствительности модели.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROADMAP ============ -->
+  <section class="section section--alt" id="roadmap">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">07 — План</p>
+        <h2 class="section__title">Дорожная карта</h2>
+      </header>
+
+      <ol class="roadmap">
+
+        <li class="roadmap__item reveal">
+          <div class="roadmap__head">
+            <span class="roadmap__num">Этап 01</span>
+            <span class="roadmap__when">Старт после инвестиций</span>
+          </div>
+          <h3>Сбор команды и запуск ядра</h3>
+          <dl class="roadmap__body">
+            <div>
+              <dt>Технологии</dt>
+              <dd>Регистрация ООО, защита интеллектуальной собственности, выделение 20%
+                  в опционный пул (ESOP). Наём CTO и двух разработчиков. Закупка вычислительных
+                  мощностей и API-ключей ИИ. Low-code старт (PocketBase / n8n), разработка
+                  архитектуры базы данных, CRM и ИИ-сценариев. Создание базового ИИ-помощника
+                  для параметрического поиска по каталогу.</dd>
+            </div>
+            <div>
+              <dt>Бизнес-цели</dt>
+              <dd>Расчёт детальной финмодели, упаковка профессионального бизнес-плана
+                  для венчурных фондов.</dd>
+            </div>
+          </dl>
+        </li>
+
+        <li class="roadmap__item reveal">
+          <div class="roadmap__head">
+            <span class="roadmap__num">Этап 02</span>
+            <span class="roadmap__when">Через 3—4 месяца</span>
+          </div>
+          <h3>Наполнение базы и запуск MVP</h3>
+          <dl class="roadmap__body">
+            <div>
+              <dt>Технологии</dt>
+              <dd>Сборка полноценного MVP. Запуск мультизадачных личных кабинетов, панели
+                  администратора и встроенной CRM для контроля B2B-сделок. Интеграция внешних
+                  ИИ-моделей через API для умного сравнения и аналитики робототехники.</dd>
+            </div>
+            <div>
+              <dt>Бизнес-цели</dt>
+              <dd>Привлечение и бесплатное подключение первых 15—20 лояльных вендоров
+                  (поставщиков) для формирования стартовой витрины.</dd>
+            </div>
+          </dl>
+        </li>
+
+        <li class="roadmap__item reveal">
+          <div class="roadmap__head">
+            <span class="roadmap__num">Этап 03</span>
+            <span class="roadmap__when">Через 6—8 месяцев</span>
+          </div>
+          <h3>Выход на раунд, безопасность и киберзащита</h3>
+          <dl class="roadmap__body">
+            <div>
+              <dt>Технологии</dt>
+              <dd>Масштабирование архитектуры платформы (миграция на промышленный бэкенд
+                  Go / PostgreSQL). Разработка контура 100% безопасности и конфиденциальности
+                  данных. Старт проектирования собственных ИИ-моделей для локального
+                  развёртывания (on-premise). Создание защищённых API-связей с базами клиентов.</dd>
+            </div>
+            <div>
+              <dt>Бизнес-цели</dt>
+              <dd>Поиск стратегических финансовых и сервисных партнёров. Выход на венчурные
+                  фонды (раунд A) с готовым MVP, командой и защищённой масштабируемой
+                  ИТ-концепцией.</dd>
+            </div>
+          </dl>
+        </li>
+
+        <li class="roadmap__item reveal">
+          <div class="roadmap__head">
+            <span class="roadmap__num">Этап 04</span>
+            <span class="roadmap__when">Через год</span>
+          </div>
+          <h3>Коммерческое масштабирование и RaaS</h3>
+          <dl class="roadmap__body">
+            <div>
+              <dt>Технологии</dt>
+              <dd>Полноценный запуск обученных локальных ИИ-моделей в закрытых контурах
+                  крупных клиентов. Интеграция банковских и лизинговых API-контуров,
+                  подключение безопасных эскроу-счетов для крупных сделок.</dd>
+            </div>
+            <div>
+              <dt>Бизнес-цели</dt>
+              <dd>Переход на коммерческую монетизацию: запуск подписок (RaaS),
+                  Trade-In направления, программ лизинга и проведение первых транзакций.</dd>
+            </div>
+          </dl>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ INVEST ============ -->
+  <section class="section" id="invest">
+    <div class="container">
+      <div class="split split--wide">
+        <div class="reveal">
+          <p class="eyebrow">08 — Инвестору</p>
+          <h2 class="section__title">Раунд Pre-seed</h2>
+          <p class="section__lead">
+            Привлекаем финансирование на построение MVP, формирование юридического контура
+            сделок и запуск первых B2B-продаж. Ищем партнёров со стратегической экспертизой
+            в MedTech, промышленной автоматизации и лизинге.
+          </p>
+          <div class="facts">
+            <div class="fact"><span>Стадия</span><b>Pre-seed</b></div>
+            <div class="fact"><span>Инструмент</span><b>SAFE / доля</b></div>
+            <div class="fact"><span>Горизонт</span><b>12 месяцев</b></div>
+            <div class="fact"><span>Использование</span><b>Продукт • юр. контур • продажи</b></div>
+          </div>
+
+          <p class="theses-title mt-m">Ключевые инвестиционные тезисы</p>
+          <ul class="list-check">
+            <li><b>Модель Asset-Light.</b> Платформа масштабируется без капитальных затрат
+                на покупку собственного оборудования.</li>
+            <li><b>Диверсифицированная монетизация.</b> Комиссии от транзакций (1—15%),
+                подписочная модель RaaS и сервисные лиды.</li>
+            <li><b>Высокий LTV-потенциал.</b> Удержание B2B-клиента на горизонте 2—5 лет
+                за счёт циклов обслуживания, дозакупок и трейд-ина.</li>
+            <li><b>Капитализация данных.</b> Закрытая аналитика рынка робототехники и обучение
+                собственных ИИ-моделей как долгосрочный нематериальный актив платформы.</li>
+          </ul>
+        </div>
+
+        <!-- ============ CONTACT FORM ============ -->
+        <div class="form-wrap reveal" id="contact">
+          <h3 class="form__title">Запросить материалы</h3>
+          <p class="form__sub">Отправим презентацию проекта (Pitch Deck).</p>
+          <form class="form" id="leadForm" novalidate>
+            <label class="field">
+              <span>Имя</span>
+              <input type="text" name="name" required placeholder="Иван Иванов">
+            </label>
+            <label class="field">
+              <span>E-mail</span>
+              <input type="email" name="email" required placeholder="you@fund.com">
+            </label>
+            <label class="field">
+              <span>Компания / фонд</span>
+              <input type="text" name="company" placeholder="Необязательно">
+            </label>
+            <label class="field">
+              <span>Интерес</span>
+              <select name="interest">
+                <option>Получить презентацию</option>
+                <option>Инвестиции в раунд</option>
+                <option>Партнёрство (вендор)</option>
+                <option>Партнёрство (лизинг / финансы)</option>
+                <option>Я потенциальный заказчик</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Комментарий</span>
+              <textarea name="message" rows="3" placeholder="Кратко о вас и интересе"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consent" required>
+              <span>Согласен на обработку персональных данных в соответствии
+                    с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a></span>
+            </label>
+            <button class="btn btn--primary btn--full" type="submit">Отправить запрос</button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contacts">
+            <span class="contacts__label">Или напишите напрямую</span>
+            <a class="contacts__item" href="https://t.me/airmaze7" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1 1.4 11.6c-1-.3-1.1-1 .2-1.5l19-7.3c.9-.3 1.6.2 1.3 1.5z"/></svg>
+              <span>Telegram <b>@airmaze7</b></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISION / AUTHOR ============ -->
+  <section class="section section--alt" id="vision">
+    <div class="vision__grid-bg" aria-hidden="true"></div>
+    <div class="container container--narrow">
+      <header class="section__head section__head--center reveal">
+        <p class="eyebrow">09 — От автора</p>
+      </header>
+
+      <article class="vision reveal">
+        <p>
+          Идея создать такую эко-платформу родилась в духе времени и запросом самого рынка.
+          Подобные вещи обязательно реализуются. Это взгляд на шаг вперёд.
+        </p>
+        <p>
+          ИИ ворвался в нашу жизнь и уже стал частью её. И естественным образом он развивается,
+          проникает везде и объединяется с робототехникой в разных сферах. Беспилотные системы,
+          медицинские протезы, промышленность, склады и обслуживание. И сейчас мы стоим на пороге
+          внедрения различных антропоморфных роботов всевозможных вариаций.
+        </p>
+        <p>
+          На первый взгляд кажется, что будет эффективнее разделять направления. Но в нашем случае
+          база экосистемы должна быть изначально многофункциональна. Основные вещи: обеспечение
+          безупречной безопасности и конфиденциальности; удобные и продуманные кабинеты продавцов
+          и покупателей для профессионалов или частных лиц по поиску сложных технологичных товаров;
+          оказание услуг по продажам и продвижению роботизированных систем разных направлений —
+          это то, что объединяет всё.
+        </p>
+        <p>
+          Развитие платформы сразу опирается на рынок промышленных роботов и коммерции, что быстро
+          приводит к заработку, развивает медицинское направление — как являющееся приоритетным
+          в господдержке, и обязательно направлено на встречу зарождающемуся рынку антропоморфных
+          роботов.
+        </p>
+        <p>
+          Растущее многообразие и сложность роботизированных систем предсказуемо толкает отдельных
+          профессионалов к более детализированному подходу в своих направлениях. Однако наша
+          платформа, не являясь производителем конкретных роботов, напротив является общим
+          многофункциональным удобным связующим звеном между этими производителями и покупателями.
+        </p>
+        <p class="vision__out">
+          Именно широкий охват и создаёт для платформы Simonix гибкость в бизнесе и возможности
+          будущего роста на российском рынке, а затем и в международном масштабе.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <header class="section__head reveal">
+        <p class="eyebrow">10 — Вопросы</p>
+        <h2 class="section__title">Коротко о главном</h2>
+      </header>
+
+      <div class="accordion">
+        <details class="acc reveal">
+          <summary>Вы производите роботов?</summary>
+          <p>Нет. Simonix — связующее звено между производителями, сервисными подрядчиками
+             и заказчиками. Мы не держим склад и не берём технику на баланс.</p>
+        </details>
+        <details class="acc reveal">
+          <summary>Как именно берётся комиссия?</summary>
+          <p>Ставка плавающая: от 1% до 15%+ в зависимости от формата. По разовым сделкам —
+             от суммы контракта при закрытии. По RaaS, аренде и лизингу — от каждого
+             периодического платежа в течение срока договора.</p>
+        </details>
+        <details class="acc reveal">
+          <summary>Вы сами делаете сертификацию и пусконаладку?</summary>
+          <p>Мы организуем эти работы через аккредитованных партнёров и держим SLA внутри платформы.
+             Ответственность исполнителя — на подрядчике, координация и соблюдение стандартов сервиса — на нас.</p>
+        </details>
+        <details class="acc reveal">
+          <summary>Что мешает вендору увести сделку мимо платформы?</summary>
+          <p>Договор с эксклюзивом на приведённый лид, эскроу-расчёты, а также сервисный
+             и финансовый контур, который вендору невыгодно воспроизводить самостоятельно.
+             Контроль сделки автоматизирован через ИИ в мессенджере, а история переговоров
+             защищена и может использоваться в спорных ситуациях как цифровой свидетель.</p>
+        </details>
+        <details class="acc reveal">
+          <summary>Какая география на старте?</summary>
+          <p>Россия и СНГ на первом этапе, далее — рынки MENA и Юго-Восточной Азии
+             с высоким спросом на медицинскую, промышленную и другую робототехнику.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo__text">SIMONIX</span>
+      <p>Платформа сделок с роботизированными системами.<br>Медицина · протезирование · промышленность · HoReCa.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Подвал">
+      <div>
+        <h4>Платформа</h4>
+        <a href="#architecture">Экосистема</a>
+        <a href="#problem">Проблемы и решения</a>
+        <a href="#model">Монетизация</a>
+        <a href="#economics">Экономика</a>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#invest">Инвесторам</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="https://t.me/airmaze7" target="_blank" rel="noopener">Telegram @airmaze7</a>
+        <a href="#contact">Форма запроса</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <span>© <span id="year"></span> Simonix. Все права защищены.</span>
+    <span class="footer__disc">
+      <a href="privacy.html">Политика конфиденциальности</a> ·
+      Информация на сайте не является публичной офертой или инвестиционной рекомендацией.
+    </span>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js?v=10"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2404e25aea2af60',t:'MTc4NTUzOTcyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Simonix — design tokens
+   Строгая графитовая палитра, единая шкала отступов и типографики.
+   ========================================================================== */
+
+:root {
+  /* --- Плоскости --- */
+  --bg:            #0e1116;
+  --bg-alt:        #12161d;
+  --surface:       #161b23;
+  --surface-2:     #1b212a;
+  --line:          #252c37;
+  --line-soft:     #1e242e;
+
+  /* --- Текст --- */
+  --text:          #e7eaef;
+  --text-muted:    #9aa4b2;
+  --text-dim:      #6d7887;
+
+  /* --- Акцент: приглушённая сталь-циан --- */
+  --accent:        #7fa8c9;
+  --accent-strong: #a8c6de;
+  --accent-dim:    rgba(127, 168, 201, .12);
+  --accent-line:   rgba(127, 168, 201, .32);
+
+  /* --- Типографика --- */
+  --font:      "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --fs-xs:  .75rem;
+  --fs-sm:  .875rem;
+  --fs-base: 1rem;
+  --fs-md:  clamp(1.05rem, .98rem + .3vw, 1.19rem);
+  --fs-lg:  clamp(1.35rem, 1.2rem + .6vw, 1.6rem);
+  --fs-xl:  clamp(1.75rem, 1.4rem + 1.5vw, 2.6rem);
+  --fs-2xl: clamp(2.2rem, 1.6rem + 2.8vw, 3.9rem);
+
+  /* --- Ритм --- */
+  --sp-1: .25rem;
+  --sp-2: .5rem;
+  --sp-3: .75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: clamp(4.5rem, 3rem + 6vw, 8rem);
+
+  /* --- Геометрия --- */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --container: 1180px;
+  --container-narrow: 820px;
+
+  /* --- Тени и переходы --- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-md: 0 12px 32px -12px rgba(0,0,0,.65);
+  --shadow-lg: 0 32px 64px -24px rgba(0,0,0,.75);
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --dur: .28s;
+}
+
+/* Светлая тема — на случай системного предпочтения */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:        #f7f8fa;
+    --bg-alt:    #eef1f5;
+    --surface:   #ffffff;
+    --surface-2: #f3f5f8;
+    --line:      #dfe3ea;
+    --line-soft: #e8ebf0;
+    --text:      #161b23;
+    --text-muted:#525c6a;
+    --text-dim:  #7b8593;
+    --accent:        #35617f;
+    --accent-strong: #24485f;
+    --accent-dim:    rgba(53, 97, 127, .09);
+    --accent-line:   rgba(53, 97, 127, .28);
+    --shadow-md: 0 12px 28px -14px rgba(22,27,35,.28);
+    --shadow-lg: 0 28px 56px -26px rgba(22,27,35,.32);
+  }
+}

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 640" width="660" height="640" role="presentation">
+  <defs>
+    <!-- «Горизонт»: контуры растворяются к верхнему и нижнему краю -->
+    <linearGradient id="horizon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff" stop-opacity="0"/>
+      <stop offset="16%"  stop-color="#fff" stop-opacity=".5"/>
+      <stop offset="52%"  stop-color="#fff" stop-opacity="1"/>
+      <stop offset="84%"  stop-color="#fff" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="fade">
+      <rect width="660" height="640" fill="url(#horizon)"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#fade)" fill="none" stroke="#7fa8c9" stroke-width="1.6"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- ============ Антропоморфный робот ============ -->
+    <g>
+      <!-- антенна и голова -->
+      <path d="M212 62V46"/><circle cx="212" cy="41" r="4"/>
+      <rect x="176" y="62" width="72" height="66" rx="20"/>
+      <path d="M190 84h44v20h-44z"/>
+      <path d="M198 116h28"/>
+      <!-- шея -->
+      <path d="M200 128h24v14h-24z"/>
+      <!-- корпус -->
+      <path d="M178 160c0-11 9-20 20-20h28c11 0 20 9 20 20v104c0 11-9 20-20 20h-28c-11 0-20-9-20-20z"/>
+      <path d="M194 176h36v30h-36z"/>
+      <path d="M192 224h40M192 238h26"/>
+      <!-- плечи -->
+      <circle cx="160" cy="168" r="18"/><circle cx="264" cy="168" r="18"/>
+      <!-- левая рука -->
+      <path d="M148 186h24v62h-24z" rx="10"/>
+      <circle cx="160" cy="258" r="9"/>
+      <path d="M149 268h22v60h-22z" rx="9"/>
+      <path d="M150 334h20v26h-20z" rx="7"/>
+      <!-- правая рука -->
+      <path d="M252 186h24v62h-24z" rx="10"/>
+      <circle cx="264" cy="258" r="9"/>
+      <path d="M253 268h22v60h-22z" rx="9"/>
+      <path d="M254 334h20v26h-20z" rx="7"/>
+      <!-- таз -->
+      <path d="M182 284h60v34h-60z"/>
+      <!-- левая нога -->
+      <path d="M188 318h24v84h-24z" rx="10"/>
+      <circle cx="200" cy="412" r="10"/>
+      <path d="M189 422h22v92h-22z" rx="9"/>
+      <path d="M182 514h36v18h-36z" rx="5"/>
+      <!-- правая нога -->
+      <path d="M212 318h24v84h-24z" rx="10"/>
+      <circle cx="224" cy="412" r="10"/>
+      <path d="M213 422h22v92h-22z" rx="9"/>
+      <path d="M206 514h36v18h-36z" rx="5"/>
+    </g>
+
+    <!-- ============ ИИ-протез (бионическая рука) ============ -->
+    <g transform="translate(382,74)">
+      <!-- приёмная гильза -->
+      <path d="M58 6C32 30 24 70 32 116h84c8-46 0-86-26-110z"/>
+      <path d="M36 52h76M40 84h68"/>
+      <!-- плечевой шарнир -->
+      <circle cx="74" cy="134" r="18"/>
+      <!-- предплечье -->
+      <path d="M44 148h60c8 0 14 6 14 14v92c0 8-6 14-14 14H44c-8 0-14-6-14-14v-92c0-8 6-14 14-14z"/>
+      <path d="M46 172h56M46 194h38"/>
+      <!-- ИИ-модуль -->
+      <rect x="58" y="212" width="32" height="26" rx="4"/>
+      <path d="M74 212v-8M74 238v8M58 225h-8M90 225h8"/>
+      <!-- запястье -->
+      <circle cx="74" cy="284" r="15"/>
+      <!-- ладонь -->
+      <path d="M42 298h64c7 0 12 5 12 12v40c0 7-5 12-12 12H42c-7 0-12-5-12-12v-40c0-7 5-12 12-12z"/>
+      <!-- пальцы: указательный, средний, безымянный, мизинец -->
+      <path d="M44 362h14v56a7 7 0 0 1-14 0z"/>
+      <path d="M64 362h14v64a7 7 0 0 1-14 0z"/>
+      <path d="M84 362h14v58a7 7 0 0 1-14 0z"/>
+      <path d="M104 362h14v46a7 7 0 0 1-14 0z"/>
+      <!-- фаланговые шарниры -->
+      <circle cx="51" cy="392" r="3.5"/><circle cx="71" cy="396" r="3.5"/>
+      <circle cx="91" cy="393" r="3.5"/><circle cx="111" cy="387" r="3.5"/>
+      <!-- большой палец -->
+      <path d="M30 320H18a12 12 0 0 0-12 12v36a11 11 0 0 0 22 0v-26"/>
+      <circle cx="17" cy="352" r="3.5"/>
+    </g>
+  </g>
+</svg>
